@@ -30,6 +30,7 @@ for server in (server1,server2):
     )
     conn.autocommit = True
     cursor = conn.cursor()
+    cursor.execute("truncate load_balancer RESTART IDENTITY CASCADE;")
 
     for sql in gen_list():
       cursor.execute(sql)

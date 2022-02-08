@@ -13,9 +13,6 @@ def gen_list():
 		if line != "":
 			data = line.strip().split(',')
 			sql_list.append(int(data[0]),data[1].replace('"',''),data[2].replace('"',''),int(data[3]),data[4].replace('"',''))
-# 				cursor.execute('''
-# 					INSERT INTO load_balancer(group_id,dst_uri,resources,probe_mode,description) \
-# 					VALUES {}'''.format(sql))
   return sql_list
 
 for server in (server1,server2):

@@ -23,8 +23,8 @@ for server in (server1,server2):
   try:
     conn = psycopg2.connect(
       database="opensips", 
-      user='opensips', 
-      password='opensipsrw', 
+      user='postgres', 
+      password='postgres', 
       host=server, 
       port= '5432'
     )
